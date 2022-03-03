@@ -44,18 +44,23 @@ p{
     right: 0;
 }
 .artikeln{
-    width: 25vw;
     margin: 10px;
-    height: 50vh;
+    width: 30vh;
+    height: 30vh;
     background-color:#9CA687;
-    border-radius: 40px;
+    border-radius: 10%;
+    padding-top: 3.5vh;
 }
 .artikeln > div{
     background-color: #F0EFED;
-    width: 20vw;
-    height: 25vh;
-    border-radius: 40px;
-    margin-left: 2.5vw;
+    width: 25vh;
+    height: 20vh;
+    border-radius: 10%;
+    margin-left: 2.5vh;
+}
+.artikeln > p{
+    margin-left: 2vw;
+    margin-top: 3vh;
 }
 
 /* Anmeldung und Konto erstellung */
