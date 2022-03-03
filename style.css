@@ -1,0 +1,72 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Open Sans', cursive;
+}
+/* Index und allgemein */
+a{
+    color: #3A4E30;
+    text-decoration: none;
+    font-weight: bold;
+}
+#header{
+    background-image: url("./img/henry-be-lc7xcWebECc-unsplash.jpg");
+    background-size: cover;
+    height: 40vh;
+}
+#grun{
+    position: absolute;
+    background-color: #3A4E30;
+    width: 100vw;
+    height: 40vh;
+    opacity: 0.6;
+}
+#header > h1{
+    position: absolute;
+    font-size: 120px;
+    top: 10vh;
+    width: 100vw;
+    text-align: center;
+    text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
+    color: #F0EFED;
+}
+#header > a > h3{
+    position: absolute;
+    text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
+    font-size: 75px;
+    color: #F0EFED;
+}
+p{
+    font-size: 30px;
+}
+#buttons{
+    position: absolute;
+    right: 0;
+}
+.artikeln{
+    width: 25vw;
+    margin: 10px;
+    height: 50vh;
+    background-color:#9CA687;
+    border-radius: 40px;
+}
+.artikeln > div{
+    background-color: #F0EFED;
+    width: 20vw;
+    height: 25vh;
+    border-radius: 40px;
+    margin-left: 2.5vw;
+}
+
+/* Anmeldung und Konto erstellung */
+#mainBox{
+    width: 30vw;
+    margin: 10px auto;
+}
+#mainBox > div{
+    display: flex;
+    flex-direction: row;
+}
+#mainBox > div > *{
+    margin: 10px;
+}
