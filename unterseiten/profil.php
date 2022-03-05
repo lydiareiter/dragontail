@@ -20,7 +20,15 @@
     <a href="../index.php">
         <h3>Dragontail</h3>
     </a>
-    <h1>Konto erstellen</h1>
+
+    <?php
+        if($_COOKIE["Dragontail"] == null){
+            header("Location: ./anmelden.php");
+            exit;
+        }
+    ?>
+
+    <h1>Konto</h1>
     <div id="buttons">
         <a href="./warenkorb.php">
             <img src="../img/shopping-cart.png" alt="Shopping Cart">
@@ -31,48 +39,37 @@
     </div>
 </div>
 <div id="mainBox">
-    <form action="benutzerErstellen.php" method="post">
-        <div>
-            <h3>Vorname</h3>
-            <input type="text" name="vorname" id="vorname">
-        </div>
+    <?php
+        $data = json_decode($_COOKIE["Dragontail"]);
 
-        <div>
-            <h3>Nachname</h3>
-            <input type="text" name="nachname" id="nachname">
-        </div>
-        <div>
-            <h3>Geburtsdatum</h3>
-            <input type="date" name="gbDate" id="gbDate">
-        </div>
-        <div>
-            <h3>E-Mail</h3>
-            <input type="email" name="email" id="email">
-        </div>
-        <div>
-            <h3>Passwort</h3>
-            <input type="password" name="password" id="password">
-        </div>
-        <div>
-            <h3>Passwort erneut eingeben</h3>
-            <input type="password" name="password2" id="password2">
-        </div>
-        <div>
-            <button type="submit">Erstellen</button>
-        </div>
-    </form>
-    <div>
-        <a href="./anmelden.php">Schon ein Konto?</a>
-    </div>
+        echo    '<form action="logout.php" method="post">
+                <div>
+                    <h3>Vorname</h3>
+                    <p id="vorname">'. $data->vorname .'</p>
+                </div>
+                <div>
+                    <h3>Nachname</h3>
+                    <p id="nachname">'. $data->nachname .'</p>
+                </div>
+                <div>
+                    <h3>Geburtsdatum</h3>
+                    <p id="gbDate">'. $data->geburtsdatum .'</p>
+                </div>
+                <div>
+                    <h3>E-Mail</h3>
+                    <p id="email">'. $data->email .'</p>
+                </div>
+                <div>
+                    <button type="submit">Logout</button>
+                </div>
+                </form>';
+    ?>       
 </div>
-
 <?php
         if($_COOKIE["Dragontail"] == null){
             header("Location: ./profil.php");
             exit;
         }
     ?>
-
 </body>
-
 </html>

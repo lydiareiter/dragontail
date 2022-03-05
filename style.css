@@ -1,63 +1,72 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
     font-family: 'Open Sans', cursive;
     overflow-x: hidden;
 }
+
 /* Index und allgemein */
-a{
+a {
     color: #3A4E30;
     text-decoration: none;
     font-weight: bold;
 }
-#header{
+
+#header {
     background-image: url("./img/henry-be-lc7xcWebECc-unsplash.jpg");
     background-size: cover;
     height: 40vh;
 }
-#grun{
+
+#grun {
     position: absolute;
     background-color: #3A4E30;
     width: 100vw;
     height: 40vh;
     opacity: 0.6;
 }
-#header > h1{
+
+#header > h1 {
     position: absolute;
-    font-size: 120px;
+    font-size: 15vh;
     top: 10vh;
     width: 100vw;
     text-align: center;
     text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
     color: #F0EFED;
 }
-#header > a > h3{
+
+#header > a > h3 {
     position: absolute;
     text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
-    font-size: 75px;
+    font-size: 10vh;
     color: #F0EFED;
 }
-p{
+
+p {
     font-size: 30px;
 }
-#buttons{
+
+#buttons {
     position: absolute;
     right: 0;
 }
-#artikel{
+
+#artikel {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 }
-.artikeln{
+
+.artikeln {
     margin: 10px;
-    width: 30vh;
     height: 30vh;
-    background-color:#9CA687;
+    background-color: #9CA687;
     border-radius: 10%;
     padding-top: 3.5vh;
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
-.artikeln > div{
+
+.artikeln > div {
     background-color: #F0EFED;
     width: 25vh;
     height: 20vh;
@@ -67,21 +76,33 @@ p{
     background-position: center;
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
-.artikeln > p{
+
+.artikeln > p {
     margin-left: 0.2vw;
     margin-top: 3vh;
     font-size: 3vh;
 }
 
 /* Anmeldung und Konto erstellung */
-#mainBox{
+#mainBox {
     width: 30vw;
     margin: 10px auto;
 }
-#mainBox > div{
+
+#mainBox > div {
     display: flex;
     flex-direction: row;
 }
-#mainBox > div > *{
+
+#mainBox > div > * {
     margin: 10px;
+}
+
+/* Footer */
+footer{
+    color: #F0EFED;
+    background-color: #3A4E30;
+    margin-top: 4vh;
+    padding: 2vh;
+    box-shadow: 14px 14px 39px rgba(0, 0, 0, 0.25), inset 14px 14px 39px rgba(0, 0, 0, 0.25);
 }
