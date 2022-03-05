@@ -17,7 +17,7 @@ a{
 #grun{
     position: absolute;
     background-color: #3A4E30;
-    width: 100vw;
+    width: 90vw;
     height: 40vh;
     opacity: 0.6;
 }
@@ -25,7 +25,7 @@ a{
     position: absolute;
     font-size: 120px;
     top: 10vh;
-    width: 100vw;
+    width: 90vw;
     text-align: center;
     text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
     color: #F0EFED;
@@ -61,6 +61,9 @@ p{
 .artikeln > p{
     margin-left: 2vw;
     margin-top: 3vh;
+}
+.artikeln > div:nth-child(5){
+    float: left;
 }
 
 /* Anmeldung und Konto erstellung */
