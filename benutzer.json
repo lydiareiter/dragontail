@@ -1,23 +1,23 @@
 [
-    {
-        "vorname": "Lydia",
-        "nachname": "Reiter",
-        "geburtsdatum": "2004-03-13",
-        "email": "lydia.maslowski@gmail.com",
-        "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
-    },
-    {
-        "vorname": "Thomas",
-        "nachname": "Spindler",
-        "geburtsdatum": "2005-03-17",
-        "email": "t.spindler@students.htl-leonding.ac.at",
-        "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
-    },
-    {
-        "vorname": "Lydia",
-        "nachname": "Maslowski",
-        "geburtsdatum": "2004-03-13",
-        "email": "l.maslowski@gmx.at",
-        "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
-    }
+  {
+    "vorname": "Lydia",
+    "nachname": "Reiter",
+    "geburtsdatum": "2004-03-13",
+    "email": "lydia.maslowski@gmail.com",
+    "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
+  },
+  {
+    "vorname": "Thomas",
+    "nachname": "Spindler",
+    "geburtsdatum": "2005-03-17",
+    "email": "t.spindler@students.htl-leonding.ac.at",
+    "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
+  },
+  {
+    "vorname": "Lydia",
+    "nachname": "Maslowski",
+    "geburtsdatum": "2004-03-13",
+    "email": "l.maslowski@gmx.at",
+    "passwort": "16d7a4fca7442dda3ad93c9a726597e4"
+  }
 ]

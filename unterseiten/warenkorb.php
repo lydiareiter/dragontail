@@ -31,14 +31,16 @@
     </div>
 
     <?php
-        if($_COOKIE["Dragontail"] == null){
-            header("Location: ./profil.php");
-            exit;
-        }
+    if ($_COOKIE["Dragontail"] == null) {
+        header("Location: ./profil.php");
+        exit;
+    }
     ?>
 
 </div>
-<div></div>
+<div>
+    <h2>Sie haben nichts in Ihren Warenkob</h2>
+</div>
 <?php
 include("../footer.php");
 ?>

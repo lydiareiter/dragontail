@@ -26,7 +26,7 @@ $myfile = fopen("../benutzer.json", "w") or die("Unable to open file!");
 fwrite($myfile, $string);
 fclose($myfile);
 
-setcookie("Dragontail", $string2, time()+3600); # 1 Stunde gültig
+setcookie("Dragontail", $string2, time() + 3600); # 1 Stunde gültig
 header("Location: ./profil.php");
 exit;
 ?>

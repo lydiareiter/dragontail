@@ -31,19 +31,19 @@
     </div>
 </div>
 <div id="mainBox">
-<form action="login.php" method="post">
-    <div>
-        <h3>E-Mail</h3>
-        <input type="email" name="email" id="email">
-    </div>
-    <div>
-        <h3>Passwort</h3>
-        <input type="password" name="password" id="password">
-    </div>
-    <div>
-        <button type="submit">Anmelden</button>
-    </div>
-</form>
+    <form action="login.php" method="post">
+        <div>
+            <h3>E-Mail</h3>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <h3>Passwort</h3>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <button type="submit">Anmelden</button>
+        </div>
+    </form>
     <div>
         <a href="./konto-erstellen.php">Konto erstellen</a>
     </div>
