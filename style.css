@@ -68,10 +68,10 @@ p {
 
 .artikeln > div {
     background-color: #F0EFED;
-    width: 25vh;
     height: 20vh;
     border-radius: 10%;
     margin-left: 2.5vh;
+    margin-right: 2.5vh;
     background-size: cover;
     background-position: center;
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
@@ -105,4 +105,9 @@ footer{
     margin-top: 4vh;
     padding: 2vh;
     box-shadow: 14px 14px 39px rgba(0, 0, 0, 0.25), inset 14px 14px 39px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+footer > div > h2{
+    text-align: center;
 }
