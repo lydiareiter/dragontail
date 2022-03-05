@@ -65,14 +65,9 @@
         <a href="./anmelden.php">Schon ein Konto?</a>
     </div>
 </div>
-
 <?php
-        if($_COOKIE["Dragontail"] == null){
-            header("Location: ./profil.php");
-            exit;
-        }
-    ?>
-
+include("./footer.php");
+?>
 </body>
 
 </html>
