@@ -89,13 +89,8 @@ p {
     margin: 10px auto;
 }
 
-#mainBox > div {
-    display: flex;
-    flex-direction: row;
-}
-
-#mainBox > div > * {
-    margin: 10px;
+#mainBox > form > div > button{
+    margin-top: 2vh;
 }
 
 /* Footer */
@@ -105,10 +100,25 @@ footer {
     margin-top: 4vh;
     padding: 2vh;
     box-shadow: 14px 14px 39px rgba(0, 0, 0, 0.25), inset 14px 14px 39px rgba(0, 0, 0, 0.25);
-    display: grid;
-    grid-template-columns: auto auto auto;
 }
 
-footer > div > h2 {
+footer > h2{
+    margin-left: 2vw;
+}
+
+footer > div{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+footer > div > div > h2 {
     text-align: center;
+}
+
+footer > div > div > *{
+    color: #F0EFED;
+}
+
+footer > div > div > p{
+    font-size: 3vh;
 }
