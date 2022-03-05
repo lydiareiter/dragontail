@@ -2,6 +2,7 @@
     padding:0;
     margin:0;
     font-family: 'Open Sans', cursive;
+    overflow-x: hidden;
 }
 /* Index und allgemein */
 a{
@@ -17,7 +18,7 @@ a{
 #grun{
     position: absolute;
     background-color: #3A4E30;
-    width: 90vw;
+    width: 100vw;
     height: 40vh;
     opacity: 0.6;
 }
@@ -25,7 +26,7 @@ a{
     position: absolute;
     font-size: 120px;
     top: 10vh;
-    width: 90vw;
+    width: 100vw;
     text-align: center;
     text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
     color: #F0EFED;
@@ -43,6 +44,10 @@ p{
     position: absolute;
     right: 0;
 }
+#artikel{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
 .artikeln{
     margin: 10px;
     width: 30vh;
@@ -50,6 +55,7 @@ p{
     background-color:#9CA687;
     border-radius: 10%;
     padding-top: 3.5vh;
+    box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
 .artikeln > div{
     background-color: #F0EFED;
@@ -57,13 +63,14 @@ p{
     height: 20vh;
     border-radius: 10%;
     margin-left: 2.5vh;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
 .artikeln > p{
-    margin-left: 2vw;
+    margin-left: 0.2vw;
     margin-top: 3vh;
-}
-.artikeln > div:nth-child(5){
-    float: left;
+    font-size: 3vh;
 }
 
 /* Anmeldung und Konto erstellung */

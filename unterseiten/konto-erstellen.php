@@ -31,14 +31,15 @@
         </div>
     </div>
     <div id="mainBox">
+    <form action="benutzerErstellen.php" method="post">
         <div>
             <h3>Vorname</h3>
-            <input type="text" id="vorname">
+            <input type="text" name="vorname" id="vorname">
         </div>
 
         <div>
             <h3>Nachname</h3>
-            <input type="text" id="nachname">
+            <input type="text" name="nachname" id="nachname">
         </div>
         <div>
             <h3>Geburtsdatum</h3>
@@ -59,6 +60,7 @@
         <div>
             <button type="submit">Erstellen</button>
         </div>
+        </form>
         <div>
             <a href="./anmelden.php">Schon ein Konto?</a>
         </div>
