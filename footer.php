@@ -7,5 +7,6 @@
     </div>
     <div>
         <h2>Kontakt</h2>
+        <a href="mailto:lydia.maslowski@gmail.com">lydia.maslowski@gmail.com</a>
     </div>
 </footer>
