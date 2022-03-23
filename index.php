@@ -24,7 +24,7 @@ include("./headerIndex.php");
 
     foreach ($artikel as $i) {
         $pfad = "./img/artikel/" . $i->katigorie . "/";
-        $string = '<div class="artikeln" id="' . $i->artikelnr . '">';
+        $string = '<div onclick="popUp(this)" class="artikeln" id="' . $i->artikelnr . '">';
         $string2 = "<div style=\"background-image: url('$pfad$i->img')\"></div>";
         $string3 = '<p>' . $i->titel . '</p>';
         $string4 = '</div>';
