@@ -3,6 +3,8 @@ include("./headerIndex.php");
 ?>
 
 <body>
+<div id="blurry"></div>
+
 <div id="header">
     <div id="grun"></div>
     <a href="./index.php"><h3>Dragontail</h3></a>

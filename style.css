@@ -6,6 +6,19 @@
 }
 
 /* Index und allgemein */
+#blurry{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    /*z-index: 99;*/
+    color: #F0EFED;
+    opacity: 0.5;
+}
+
 a {
     color: #3A4E30;
     text-decoration: none;
