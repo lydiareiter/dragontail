@@ -12,12 +12,11 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    z-index: -22;
-    /*z-index: 99;*/
-    color: #F0EFED;
-    opacity: 0.5;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+
+    z-index: -1;
 }
 
 #opend{
