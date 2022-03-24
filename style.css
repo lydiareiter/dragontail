@@ -23,6 +23,12 @@
     position: absolute;
     width: 84vw;
     height: 84vh;
+
+    border-radius: 2%;
+}
+
+#opend > div {
+    border-radius: 4%;
 }
 
 a {
