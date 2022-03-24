@@ -5,6 +5,7 @@ function popUp(elem) {
     if (!isPopedUp) {
         isPopedUp = true;
 
+        /* Pop Up anzeigen */
         idOpend = elem.id;
         console.log(idOpend);
         elem.id = "opend";
@@ -26,7 +27,14 @@ function popUp(elem) {
 
         blurry.style.zIndex = 22;
         elem.style.zIndex = 23;
+
+        /* Pop Up Inhalt */
+        popUpInhalt();
     }
+}
+
+function popUpInhalt(){
+    
 }
 
 function popUpClose() {
