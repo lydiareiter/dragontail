@@ -28,13 +28,13 @@ function popUp(elem) {
         blurry.style.zIndex = 22;
         elem.style.zIndex = 23;
 
-        /* Pop Up Inhalt */
+        // Pop Up Inhalt
         popUpInhalt();
     }
 }
 
 function popUpInhalt(){
-    
+
 }
 
 function popUpClose() {
