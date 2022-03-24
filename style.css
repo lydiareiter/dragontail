@@ -20,6 +20,12 @@
     opacity: 0.5;
 }
 
+#opend{
+    position: absolute;
+    width: 84vw;
+    height: 84vh;
+}
+
 a {
     color: #3A4E30;
     text-decoration: none;
