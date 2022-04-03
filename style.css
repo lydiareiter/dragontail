@@ -24,11 +24,11 @@
     width: 84vw;
     height: 84vh;
 
-    border-radius: 2%;
+    border-radius: 50%;
 }
 
 #opend > div {
-    border-radius: 4%;
+    border-radius: 50%;
 }
 
 a {
@@ -86,14 +86,14 @@ p {
     margin: 10px;
     height: 30vh;
     background-color: #9CA687;
-    border-radius: 10%;
+    border-radius: 50%;
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
 
 .artikeln > div {
     background-color: #F0EFED;
     height: 21.5vh;
-    border-radius: 10%;
+    border-radius: 50%;
     background-size: cover;
     background-position: center;
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
