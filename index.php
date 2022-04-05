@@ -23,7 +23,6 @@ include("./headerIndex.php");
 
     <div id="artikel">
         <?php
-        //$artikel = json_decode(file_get_contents("./artikel.json"));
 
         $_db_host = "localhost";
         $_db_datenbank = "dragontail";
