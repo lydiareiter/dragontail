@@ -1,0 +1,25 @@
+name: PHPUNIT
+
+on: push
+
+jobs:
+  phpunit: "phpunit": Unknown word
+    name: Run PHP Unit tests
+
+    runs-on: ubunto-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: ctype, bcmath, fileinfo, json, mbstring, openssl, pdo, tokenizer, xml
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: composer install -n --prefer-dist
+
+      - name: Run tests
+        run: ./vendor/bin/phpunit
