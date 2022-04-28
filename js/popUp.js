@@ -2,6 +2,7 @@ let isPopedUp = false;
 let idOpend;
 let scroll;
 let blurry = document.getElementById('blurry');
+let body = document.getElementById('body');
 
 window.addEventListener("scroll", (event) => {
     scroll = this.scrollY;
