@@ -2,7 +2,7 @@
 include("./headerIndex.php");
 ?>
 
-<body id="body">
+<body id="bodycss">
     <div id="blurry" onclick="popUpClose()"></div>
 
     <div id="header">

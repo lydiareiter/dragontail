@@ -1,7 +1,6 @@
 let isPopedUp = false;
 let idOpend;
-let scroll;
-let body = document.getElementById('body');
+let scroll = 0;
 
 window.addEventListener("scroll", (event) => {
     scroll = this.scrollY;
@@ -22,22 +21,20 @@ function popUp(elem) {
         tempHeight /= 1.2;
         tempWidth /= 1.2;
 
-        let tempTop = window.innerHeight / 2 - tempHeight / 2 - 0 + scroll;
+        let tempTop = (window.innerHeight / 2 - tempHeight / 2 - 0) + scroll;
         let tempLeft = window.innerWidth / 2 - tempWidth / 2 - 0;
-
-        console.log('true1');
 
         elem.style.top = tempTop + "px";
         elem.style.left = tempLeft + "px";
 
-        console.log('true2');
         let blurry = document.getElementById('blurry');
 
         blurry.style.zIndex = 22;
         blurry.style.marginTop = scroll + 'px';
         elem.style.zIndex = 23;
 
-        console.log('true3');
+        //document.body.style.overflowY = 'hidden';
+        //document.body.style.position = 'fixed';
         
         // Pop Up Inhalt
         popUpInhalt();
@@ -61,5 +58,6 @@ function popUpClose() {
 
         opend.id = idOpend.toString();
 
+        body.style.overflowY = 'auto';
     }
 }
