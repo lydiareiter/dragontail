@@ -3,7 +3,7 @@ name: PHPUNIT
 on: push
 
 jobs:
-  phpunit: "phpunit": Unknown word
+  phpunit: 
     name: Run PHP Unit tests
 
     runs-on: ubunto-latest
