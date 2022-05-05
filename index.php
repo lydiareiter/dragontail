@@ -35,14 +35,14 @@ include("./headerIndex.php");
         }
 
         // Get Data
-        $sql = "SELECT * FROM artikel";
+        $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 //echo $row["artikelnr"] . " " . $row["titel"] . " " . $row["img"] . " " . $row["preis"] . " " . $row["katigorie"] . "<br>";
 
-                $pfad = "./img/artikel/" . $row["katigorie"] . "/";
+                $pfad = "./img/artikel/" . $row["bezeichnung"] . "/";
                 $string = '<div onclick="popUp(this)" class="artikeln" id="' . $row["artikelnr"] . '"> <p style="display:none">' . $row["artikelnr"] . '</p>';
                 $img = $pfad . $row['img'];
                 $string2 = "<div style=\"background-image: url('$img')\"></div>";
