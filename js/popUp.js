@@ -9,6 +9,8 @@ window.addEventListener("scroll", (event) => {
 function popUp(elem) {
     if (!isPopedUp) {
         isPopedUp = true;
+        document.body.id = 'overflownone';
+        document.body.style.overflowY = 'hidden';
 
         /* Pop Up anzeigen */
         idOpend = elem.id;
@@ -58,6 +60,6 @@ function popUpClose() {
 
         opend.id = idOpend.toString();
 
-        body.style.overflowY = 'auto';
+        document.body.id = 'overflowauto';
     }
 }

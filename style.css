@@ -3,10 +3,21 @@
     margin: 0;
     font-family: 'Open Sans', cursive;
     overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#overflownone{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#overflowauto{
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Index und allgemein */
-#blurry{
+#blurry {
     position: absolute;
     left: 0;
     width: 100vw;
@@ -18,7 +29,7 @@
     z-index: -1;
 }
 
-#opend{
+#opend {
     position: absolute;
     width: 84vw;
     height: 84vh;
@@ -26,7 +37,7 @@
     border-radius: 3%;
 }
 
-#opend > div {
+#opend>div {
     border-radius: 3%;
 }
 
@@ -50,7 +61,7 @@ a {
     opacity: 0.6;
 }
 
-#header > h1 {
+#header>h1 {
     position: absolute;
     font-size: 15vh;
     top: 10vh;
@@ -60,7 +71,7 @@ a {
     color: #F0EFED;
 }
 
-#header > a > h3 {
+#header>a>h3 {
     position: absolute;
     text-shadow: 17px 14px 5px rgba(0, 0, 0, 0.75);
     font-size: 10vh;
@@ -89,7 +100,7 @@ p {
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
 
-.artikeln > div {
+.artikeln>div {
     background-color: #F0EFED;
     height: 21.5vh;
     border-radius: 10%;
@@ -98,7 +109,7 @@ p {
     box-shadow: 7px 13px 5px rgba(0, 0, 0, 0.25);
 }
 
-.artikeln > p {
+.artikeln>p {
     margin-left: 0.2vw;
     margin-top: 3vh;
     font-size: 3vh;
@@ -110,7 +121,7 @@ p {
     margin: 10px auto;
 }
 
-#mainBox > form > div > button{
+#mainBox>form>div>button {
     margin-top: 2vh;
 }
 
@@ -123,23 +134,23 @@ footer {
     box-shadow: 14px 14px 39px rgba(0, 0, 0, 0.25), inset 14px 14px 39px rgba(0, 0, 0, 0.25);
 }
 
-footer > h2{
+footer>h2 {
     margin-left: 2vw;
 }
 
-footer > div{
+footer>div {
     display: grid;
     grid-template-columns: auto auto;
 }
 
-footer > div > div > h2 {
+footer>div>div>h2 {
     text-align: center;
 }
 
-footer > div > div > *{
+footer>div>div>* {
     color: #F0EFED;
 }
 
-footer > div > div > p{
+footer>div>div>p {
     font-size: 3vh;
 }
