@@ -119,7 +119,6 @@ $katigorien;
 
 
 if (isset($_GET['hin']) && $_GET['hin'] == 'artikel') {
-    echo $_POST["katigorie"];
     $target_dir = "img/artikel/" . $katigorien[$_POST["katigorie"]] . "/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
