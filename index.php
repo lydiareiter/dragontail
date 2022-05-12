@@ -34,6 +34,12 @@ include("./headerIndex.php");
             die("Connection failed: " . $conn->connect_error);
         }
 
+        if(isset($_GET['kat'])){
+            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where bezeichnung like " . $_GET['kat'] . ";";
+        }else{
+            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
+        }
+
         // Get Data
         $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
         $result = $conn->query($sql);
