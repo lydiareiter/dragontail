@@ -102,6 +102,8 @@ $katigorien;
                     }
                     # close database
                     $conn->close();
+
+                    mkdir('img/artikel/' . $_POST["name"], 0700);
                 }
             } else {
                 echo "<h2>404 Page not found</h2>";
