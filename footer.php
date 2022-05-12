@@ -1,3 +1,4 @@
+<!--
 <footer>
     <h2>Lydia Reiter</h2>
     <div>
@@ -11,3 +12,4 @@
         </div>
     </div>
 </footer>
+-->
