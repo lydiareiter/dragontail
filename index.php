@@ -92,6 +92,7 @@ include("./headerIndex.php");
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
+        
 
         if (isset($_GET["kat"]) && $_GET["kat"] != 'none') {
             $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where k.bezeichnung like '" . $_GET["kat"] . "';";
