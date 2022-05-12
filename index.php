@@ -21,6 +21,65 @@ include("./headerIndex.php");
         </div>
     </div>
 
+    <div id="filter">
+        <button type="button" class="collapsible">Filter</button>
+        <div class="content">
+            <form action="index.php" method="get">
+                <div>
+                    <label for="katigorie">Katigorie: </label>
+                    <select name="kat" id="kat">
+                        <option default value="none">Bitte auswählen</option>
+                        <?php
+
+                        $_db_host = "localhost";
+                        $_db_datenbank = "dragontail";
+                        $_db_username = "dev";
+                        $_db_passwort = "dev1234";
+
+                        $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
+
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        // Get Data
+                        $sql = "SELECT * FROM katigorie";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo '<option default value="' . $row["bezeichnung"] . '">' . $row["bezeichnung"] . '</option>';
+                            }
+                        }
+
+                        $conn->close();
+
+                        ?>
+
+                    </select>
+                </div>
+                <input type="submit" value="Filtern" name="submit">
+            </form>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </div>
+
     <div id="artikel">
         <?php
 
@@ -34,14 +93,13 @@ include("./headerIndex.php");
             die("Connection failed: " . $conn->connect_error);
         }
 
-        if(isset($_GET['kat'])){
-            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where bezeichnung like " . $_GET['kat'] . ";";
-        }else{
+        if (isset($_GET["kat"]) && $_GET["kat"] != 'none') {
+            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where k.bezeichnung like '" . $_GET["kat"] . "';";
+        } else {
             $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
         }
 
         // Get Data
-        $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
