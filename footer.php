@@ -1,15 +1,37 @@
-<!--
 <footer>
-    <h2>Lydia Reiter</h2>
     <div>
-        <div>
-            <h2>Über mich</h2>
-            <p>Schule: <a href="https://www.htl-leonding.at/">HTBLA Leonding</a></p>
+        <div class="footer-icon">
+            <img src="./img/footer/kindle.png" alt="device">
         </div>
-        <div>
-            <h2>Kontakt</h2>
-            <a href="mailto:lydia.maslowski@gmail.com">lydia.maslowski@gmail.com</a>
+        <div class="footer-text">
+            <p>0650 / 9999999</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="footer-icon">
+            <img src="./img/footer/mail.png" alt="mail">
+        </div>
+        <div class="footer-text">
+            <p>MASLOWSKILYDIA@GMAIL.COM</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="footer-icon">
+            <img src="./img/footer/web.png" alt="web">
+        </div>
+        <div class="footer-text">
+            <p>LECKARAXMUFFIN.DDNS.NET</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="footer-icon">
+            <img src="./img/footer/place.png" alt="Place Marker">
+        </div>
+        <div class="footer-text">
+            <p>LINZ, AUSTRIA</p>
         </div>
     </div>
 </footer>
--->
