@@ -23,7 +23,7 @@ include("./headerIndex.php");
 
     <div id="filter">
         <button type="button" class="collapsible">Filter</button>
-        <div class="content">
+        <div class="filter-content">
             <form action="index.php" method="get">
                 <div>
                     <label for="katigorie">Katigorie: </label>
