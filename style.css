@@ -286,7 +286,7 @@ footer > div {
 }
 
 .footer-icon img {
-    width: 3vw;
+    width: 2vw;
     height: auto;
 }
 
@@ -296,7 +296,7 @@ footer > div {
     align-items: center;
     letter-spacing: 0.5vw;
     font-family: inter-lighter;
-    font-size: 1.3em;
+    font-size: 0.8em;
 }
 
 @media (max-width: 600px) {
