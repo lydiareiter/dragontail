@@ -3,11 +3,21 @@ include("../header.php");
 ?>
 
 <body>
-<div id="header">
-    <div id="grun"></div>
-    <a href="../index.php">
-        <h3>Dragontail</h3>
-    </a>
+    <div id="header-nav-wrapper">
+        <header>
+            <a href="../index.php">
+                <h1>DRAGONTAIL</h1>
+            </a>
+        </header>
+        <nav>
+            <div>
+                <a href="warenkorb.php">WARENKORB</a>
+            </div>
+            <div>
+                <a href="profil.php">KONTO</a>
+            </div>
+        </nav>
+    </div>
 
     <?php
     if ($_COOKIE["Dragontail"] == null) {
@@ -16,16 +26,6 @@ include("../header.php");
     }
     ?>
 
-    <h1>Konto</h1>
-    <div id="buttons">
-        <a href="./warenkorb.php">
-            <img src="../img/shopping-cart.png" alt="Shopping Cart">
-        </a>
-        <a href="../index.php">
-            <img src="../img/x.png" alt="close">
-        </a>
-    </div>
-</div>
 <div id="mainBox">
     <?php
     $data = json_decode($_COOKIE["Dragontail"]);
@@ -54,7 +54,7 @@ include("../header.php");
     ?>
 </div>
 <?php
-include("../footer.php");
+include("../footer-other.php");
 ?>
 </body>
 </html>
