@@ -40,24 +40,26 @@ $katigorien;
                     <option default value="none">Bitte auswählen</option>';
 
 
-            $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
+            
+                $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
 
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Get Data
-            $sql = "SELECT * FROM katigorie";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<option default value="' . $row["katigorieid"] . '">' . $row["bezeichnung"] . '</option>';
-                    $katigorien[$row["katigorieid"]] = $row["bezeichnung"];
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
                 }
-            }
 
-            $conn->close();
+                // Get Data
+                $sql = "SELECT * FROM katigorie";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<option default value="' . $row["katigorieid"] . '">' . $row["bezeichnung"] . '</option>';
+                        $katigorien[$row["katigorieid"]] = $row["bezeichnung"];
+                    }
+                }
+
+                $conn->close();
+            
 
             echo '</select>
             </div>
@@ -77,6 +79,8 @@ $katigorien;
     
             <input type="submit" value="Upload Image" name="submit">
                 </form>';
+
+
         } else {
             if ($_GET["hin"] == 'katigorie') {
                 echo '<h2>Katigorie hinzufügen:</h2><br />
