@@ -23,11 +23,10 @@ include("../header.php");
     <div>
         <?php
         if ($_COOKIE["Dragontail"] == null) {
-            echo "<h3>Bitte erstellen Sie ein Konto</h3>";
-            set_time_limit(50000000);
             header("Location: ./profil.php");
             exit;
         }
+
         ?>
 
         <h3>Sie haben nichts in Ihren Warenkob</h3>
