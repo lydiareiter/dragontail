@@ -23,7 +23,14 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
-
+CREATE TABLE `artikel` (
+                           `artikelnr` int(11) NOT NULL,
+                           `titel` varchar(30) NOT NULL,
+                           `img` varchar(80) NOT NULL,
+                           `preis` double NOT NULL,
+                           `katigorieid` int NOT NULL,
+                           `Beschreibung` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indizes der exportierten Tabellen
@@ -49,15 +56,6 @@ COMMIT;
 --
 -- Tabellenstruktur für Tabelle `artikel`
 --
-
-CREATE TABLE `artikel` (
-  `artikelnr` int(11) NOT NULL,
-  `titel` varchar(30) NOT NULL,
-  `img` varchar(80) NOT NULL,
-  `preis` double NOT NULL,
-  `katigorieid` int NOT NULL,
-  `Beschreibung` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Daten für Tabelle `artikel`
