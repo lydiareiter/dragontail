@@ -10,3 +10,21 @@ function remove(item){
     }
     item.parentElement.children[1].innerHTML = count;
 }
+
+function addCart(item){
+    let anz = parseInt(item.parentElement.children[0].children[1].innerHTML);
+    let artikelnr = parseInt(item.parentElement.parentElement.parentElement.id);
+
+    if (localStorage.getItem(artikelnr) == null) {
+        localStorage.setItem(artikelnr, anz);
+    }else{
+        let vorherAnz = parseInt(localStorage.getItem(artikelnr));
+        localStorage.setItem(artikelnr, (vorherAnz + anz));
+    }
+}
+
+if(window.location == "fdsfdsf"){
+    let warenkorb = document.getElementById('warenkorb');
+    
+    // Warenkob mittels Localhost generieren lassen
+}

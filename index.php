@@ -95,7 +95,7 @@ include("./headerIndex.php");
                 //echo $row["artikelnr"] . " " . $row["titel"] . " " . $row["img"] . " " . $row["preis"] . " " . $row["katigorie"] . "<br>";
 
 
-                echo "<div style=\"background: url('";
+                echo "<div id=\"" . $row["artikelnr"] . "\" style=\"background: url('";
                 echo "./img/artikel/" . $row["bezeichnung"] . "/" .  $row['img'];
                 echo "')\">";
 
@@ -123,7 +123,7 @@ include("./headerIndex.php");
                             <div></div>
                         </div>
                     </div>
-                    <div class=\"product-add\">HINZUFÜGEN</div>
+                    <div onclick=\"addCart(this)\" class=\"product-add\">HINZUFÜGEN</div>
                 </div>
             </div>
         </div>";

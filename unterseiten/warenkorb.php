@@ -20,7 +20,7 @@ include("../header.php");
     </div>
 
     </div>
-    <div>
+    <div id="warenkorb">
         <?php
         if ($_COOKIE["Dragontail"] == null) {
             header("Location: ./profil.php");
