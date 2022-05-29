@@ -1,7 +1,6 @@
 function add(item){
     let count = item.parentElement.children[1].innerHTML;
-    count++;
-    item.parentElement.children[1].innerHTML = count;
+    item.parentElement.children[1].innerHTML = count + 1;
 }
 
 function remove(item){
