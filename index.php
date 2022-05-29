@@ -37,7 +37,7 @@ include("./headerIndex.php");
                     <div>
                         <label for="katigorie">Katigorie: </label>
                         <select name="kat" id="kat">
-                            <option default value="none">Bitte auswählen</option>
+                            <option value="none">Bitte auswählen</option>
                             <?php
 
                             // Get Data
