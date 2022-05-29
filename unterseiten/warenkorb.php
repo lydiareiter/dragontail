@@ -19,22 +19,22 @@ include("../header.php");
         </nav>
     </div>
 
-    <?php
-    if ($_COOKIE["Dragontail"] == null) {
-        echo "<h3>Bitte erstellen Sie ein Konto</h3>";
-        set_time_limit(50000000);
-        header("Location: ./profil.php");
-        exit;
-    }
-    ?>
+    </div>
+    <div>
+        <?php
+        if ($_COOKIE["Dragontail"] == null) {
+            echo "<h3>Bitte erstellen Sie ein Konto</h3>";
+            set_time_limit(50000000);
+            header("Location: ./profil.php");
+            exit;
+        }
+        ?>
 
-</div>
-<div>
-    <h2>Sie haben nichts in Ihren Warenkob</h2>
-</div>
-<?php
-include("../footer-other.php");
-?>
+        <h3>Sie haben nichts in Ihren Warenkob</h3>
+    </div>
+    <?php
+    include("../footer-other.php");
+    ?>
 </body>
 
 </html>
