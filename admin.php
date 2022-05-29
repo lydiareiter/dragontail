@@ -52,7 +52,7 @@ $katigorien = null;
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo '<option default value="' . $row["katigorieid"] . '">' . $row["bezeichnung"] . '</option>';
+                        echo '<option value="' . $row["katigorieid"] . '">' . $row["bezeichnung"] . '</option>';
                         $katigorien[$row["katigorieid"]] = $row["bezeichnung"];
                     }
                 }
@@ -106,10 +106,6 @@ $katigorien = null;
     ?>
 
 
-
-</body>
-
-</html>
 <?php
 
 if (isset($_GET['hin']) && $_GET['hin'] == 'artikel') {
@@ -171,3 +167,6 @@ uploaded.";
 }
 # close database
 $conn->close();
+?>
+
+</body>
