@@ -32,14 +32,7 @@ CREATE TABLE `katigorie` (
   `bezeichnung` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Daten für Tabelle `katigorie`
---
 
-INSERT INTO `katigorie` (`katigorieid`, `bezeichnung`) VALUES
-(1, 'buch'),
-(2, 'pflanze'),
-(3, 'zauberstab');
 
 --
 -- Indizes der exportierten Tabellen
@@ -63,6 +56,12 @@ ALTER TABLE `katigorie`
   MODIFY `katigorieid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- Daten für Tabelle `katigorie`
+--
+
+INSERT INTO `katigorie` (`katigorieid`, `bezeichnung`) VALUES
+(1, 'buch'),
+(2, 'pflanze'),
+(3, 'zauberstab');

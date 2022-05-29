@@ -23,6 +23,29 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+
+
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`artikelnr`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `artikelnr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
+
 --
 -- Tabellenstruktur für Tabelle `artikel`
 --
@@ -61,28 +84,3 @@ INSERT INTO `artikel` (`artikelnr`, `titel`, `img`, `preis`, `katigorieid`, `Bes
 (18, 'productions-7978252', 'pexels-rodnae-productions-7978252.jpg', 15, '3', ''),
 (19, 'productions-7979091', 'pexels-rodnae-productions-7979091.jpg', 15, '3', ''),
 (20, 'productions-7979097', 'pexels-rodnae-productions-7979097.jpg', 15, '3', '');
-
---
--- Indizes der exportierten Tabellen
---
-
---
--- Indizes für die Tabelle `artikel`
---
-ALTER TABLE `artikel`
-  ADD PRIMARY KEY (`artikelnr`);
-
---
--- AUTO_INCREMENT für exportierte Tabellen
---
-
---
--- AUTO_INCREMENT für Tabelle `artikel`
---
-ALTER TABLE `artikel`
-  MODIFY `artikelnr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
