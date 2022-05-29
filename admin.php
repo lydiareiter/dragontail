@@ -6,7 +6,14 @@ $_db_datenbank = "dragontail";
 $_db_username = "dev";
 $_db_passwort = "dev1234";
 
-$katigorien;
+$conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
+
+//Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$katigorien = null;
 ?>
 
 <body>
@@ -37,15 +44,7 @@ $katigorien;
             <div>
                 <label for="katigorie">Katigorie: </label>
                 <select name="katigorie" id="katigorie">
-                    <option default value="none">Bitte auswählen</option>';
-
-
-            
-                $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
-
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+                    <option value="none">Bitte auswählen</option>';
 
                 // Get Data
                 $sql = "SELECT * FROM katigorie";
@@ -57,8 +56,6 @@ $katigorien;
                         $katigorien[$row["katigorieid"]] = $row["bezeichnung"];
                     }
                 }
-
-                $conn->close();
             
 
             echo '</select>
@@ -91,12 +88,6 @@ $katigorien;
                 ';
 
                 if (isset($_POST['submit'])) {
-                    $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
-
-                    //Check connection
-                    if ($conn->connect_error) {
-                        die("Connection failed: " . $conn->connect_error);
-                    }
 
                     $insertStatement = "INSERT INTO katigorie VALUES (null, '" . $_POST["name"] . "');";
                     if ($conn->query($insertStatement)) {
@@ -104,8 +95,6 @@ $katigorien;
                     } else {
                         echo "<br>NO insertion into database";
                     }
-                    # close database
-                    $conn->close();
 
                     mkdir('img/artikel/' . $_POST["name"], 0700);
                 }
@@ -123,14 +112,13 @@ $katigorien;
 </html>
 <?php
 
-
 if (isset($_GET['hin']) && $_GET['hin'] == 'artikel') {
     $target_dir = "img/artikel/" . $katigorien[$_POST["katigorie"]] . "/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual image or fake image
     if (isset($_POST["submit"])) {
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
         if ($check !== false) {
@@ -169,12 +157,7 @@ if (isset($_GET['hin']) && $_GET['hin'] == 'artikel') {
 uploaded.";
             echo "<br>";
 
-            $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
 
-            //Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
 
             $insertStatement = "INSERT INTO artikel (artikelnr, titel, img, preis, katigorieid, beschreibung) VALUES (null, '" . $_POST["titel"] . "', '" . basename($_FILES["fileToUpload"]["name"]) . "', '" . ((float) $_POST["preis"]) . "', '" . $_POST['katigorie'] . "', '" . $_POST["beschreibung"] . "');";
             if ($conn->query($insertStatement)) {
@@ -182,8 +165,9 @@ uploaded.";
             } else {
                 echo "<br>NO insertion into database";
             }
-            # close database
-            $conn->close();
+
         }
     }
 }
+# close database
+$conn->close();

@@ -1,4 +1,16 @@
 <?php
+$_db_host = "localhost";
+$_db_datenbank = "dragontail";
+$_db_username = "dev";
+$_db_passwort = "dev1234";
+
+$conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
 include("./headerIndex.php");
 ?>
 
@@ -28,17 +40,6 @@ include("./headerIndex.php");
                             <option default value="none">Bitte auswählen</option>
                             <?php
 
-                            $_db_host = "localhost";
-                            $_db_datenbank = "dragontail";
-                            $_db_username = "dev";
-                            $_db_passwort = "dev1234";
-
-                            $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
-
-                            if ($conn->connect_error) {
-                                die("Connection failed: " . $conn->connect_error);
-                            }
-
                             // Get Data
                             $sql = "SELECT * FROM katigorie";
                             $result = $conn->query($sql);
@@ -48,8 +49,6 @@ include("./headerIndex.php");
                                     echo '<option default value="' . $row["bezeichnung"] . '">' . $row["bezeichnung"] . '</option>';
                                 }
                             }
-
-                            $conn->close();
 
                             ?>
 
@@ -81,16 +80,6 @@ include("./headerIndex.php");
     <main>
 
         <?php
-        $_db_host = "localhost";
-        $_db_datenbank = "dragontail";
-        $_db_username = "dev";
-        $_db_passwort = "dev1234";
-        $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
 
         if (isset($_GET["kat"]) && $_GET["kat"] != 'none') {
             $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where k.bezeichnung like '" . $_GET["kat"] . "';";
@@ -142,7 +131,6 @@ include("./headerIndex.php");
         } else {
             echo "0 results";
         }
-        $conn->close();
         ?>
     </main>
 
@@ -153,3 +141,7 @@ include("./headerIndex.php");
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>
