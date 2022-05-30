@@ -21,10 +21,19 @@ function addCart(item){
         let vorherAnz = parseInt(localStorage.getItem(artikelnr));
         localStorage.setItem(artikelnr, (vorherAnz + anz));
     }
+
+    alert("Zum Einkaufswagen hinzugefügt");
+
+    // TODO: Alert dass artikel zum Einkaufswagen hinzugefügt worden ist
 }
 
-if(window.location == "fdsfdsf"){
+
+let locations = window.location.href.split('/');
+
+if(locations[locations.length - 1] == "warenkorb.php"){
     let warenkorb = document.getElementById('warenkorb');
     
+    console.log(locations[locations.length - 1]);
+
     // Warenkob mittels Localhost generieren lassen
 }

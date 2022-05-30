@@ -14,7 +14,8 @@
     src: url(./data/font/inter/inter-extralight.ttf);
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: inter, serif;
@@ -59,7 +60,7 @@ nav {
     margin-bottom: 2vh;
 }
 
-nav > div {
+nav>div {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -117,7 +118,7 @@ main {
     grid-gap: 2vw;
 }
 
-main > div {
+main>div {
     box-sizing: border-box;
     width: 100%;
     height: 60vh !important;
@@ -154,12 +155,12 @@ main > div {
     box-sizing: border-box;
 }
 
-main > div:hover .product-overlay {
+main>div:hover .product-overlay {
     top: 0;
     left: 0;
 }
 
-main > div:hover .product-content {
+main>div:hover .product-content {
     opacity: 100%;
 }
 
@@ -221,7 +222,7 @@ main > div:hover .product-content {
     margin: 0 auto;
 }
 
-.product-amount-select > div {
+.product-amount-select>div {
     width: 100%;
     height: 100%;
     display: flex;
@@ -229,7 +230,7 @@ main > div:hover .product-content {
     align-items: center;
 }
 
-.product-amount-select-minus > div {
+.product-amount-select-minus>div {
     clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
     background-color: #000;
     width: 3vh;
@@ -237,7 +238,7 @@ main > div:hover .product-content {
     height: 3vh;
 }
 
-.product-amount-select-plus > div {
+.product-amount-select-plus>div {
     clip-path: polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%);
     background-color: #000;
     width: 3vh;
@@ -245,11 +246,12 @@ main > div:hover .product-content {
     height: 3vh;
 }
 
-.product-amount-select-plus:hover, .product-amount-select-minus:hover {
+.product-amount-select-plus:hover,
+.product-amount-select-minus:hover {
     cursor: pointer;
 }
 
-.product-amount-select > div:nth-child(2) {
+.product-amount-select>div:nth-child(2) {
     font-size: 1.2em;
 }
 
@@ -262,8 +264,8 @@ footer {
     border-top: #000 solid 0.1vh;
 }
 
-footer > div {
-    width: 90%;
+footer>div {
+    width: 80%;
     margin: 0.5vh auto;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -301,4 +303,81 @@ footer > div {
     main {
         grid-template-columns: 50% 50%
     }
+}
+
+/********************************************** MAIN ANMELDEN *********************************************************************/
+#mainBox {
+    background-color: var(--color2);
+    width: 74%;
+    margin: 0 auto;
+    padding: 6vh;
+    display: grid;
+    grid-gap: 10vh;
+}
+
+#mainBox>form {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 6vh;
+}
+
+#mainBox>form>div {
+    display: grid;
+    grid-template-columns: auto 60%;
+    grid-gap: 20%;
+}
+
+#mainBox>form>div>input {
+    background: none;
+    border: none;
+    border-bottom: #000 solid 1px;
+    font-size: 1rem;
+}
+
+#mainBox>form>div>input:focus {
+    outline: none;
+    border-bottom: #74865F solid 1px;
+}
+
+#mainBox>form>div>label {
+    font-family: 'Inter';
+    font-style: inter-lighter;
+    font-size: 1rem;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+}
+
+#mainBox>form>div>button {
+    background: rgba(58, 78, 48, 0.7);
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 0.23em;
+    text-transform: uppercase;
+    color: #F0EFED;
+    padding: 5px;
+}
+
+#mainBox > div > a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: medium;
+    color: #000;
+}
+
+#mainBox > div > a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/****************************************** WARENKORB *****************************************************************************/
+
+#warenkorb {
+    background-color: var(--color2);
+    width: 74%;
+    margin: 0 auto;
+    padding: 6vh;
+    display: grid;
+    grid-gap: 10vh;
 }

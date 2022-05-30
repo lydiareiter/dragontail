@@ -22,19 +22,19 @@ include("../header.php");
     <div id="mainBox">
         <form action="login.php" method="post">
             <div>
-                <h3>E-Mail</h3>
+                <label for="email">E-MAIL</label>
                 <input type="email" name="email" id="email">
             </div>
             <div>
-                <h3>Passwort</h3>
+                <label for="password">PASSWORT</label>
                 <input type="password" name="password" id="password">
             </div>
             <div>
-                <button type="submit">Anmelden</button>
+                <button type="submit">ANMELDEN</button>
             </div>
         </form>
         <div>
-            <a href="./konto-erstellen.php">Konto erstellen</a>
+            <a href="./konto-erstellen.php">KONTO ERSTELLEN</a>
         </div>
 
     </div>
