@@ -32,6 +32,9 @@ if ($result->num_rows > 0) {
             exit;
         }
     }
+    header("Location: ./anmelden.php?failed=true");
+    
+    exit;
 } else {
     echo "0 results";
 }

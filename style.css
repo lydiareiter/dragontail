@@ -410,6 +410,17 @@ button {
     width: 97vw;
 }
 
+.alerterror {
+    padding: 20px;
+    background-color: #b60000;
+    color: white;
+    z-index: 199;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 97vw;
+}
+
 .closebtn {
     margin-left: 15px;
     color: white;
