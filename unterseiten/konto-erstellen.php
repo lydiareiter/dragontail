@@ -23,12 +23,12 @@ include("../header.php");
         <form action="benutzerErstellen.php" method="post">
             <div>
                 <h3>Vorname</h3>
-                <input type="text" name="vorname" id="vorname">
+                <input type="text" name="vorname" id="vorname" required>
             </div>
 
             <div>
                 <h3>Nachname</h3>
-                <input type="text" name="nachname" id="nachname">
+                <input type="text" name="nachname" id="nachname" required>
             </div>
             <div>
                 <h3>Geburtsdatum</h3>
@@ -36,15 +36,15 @@ include("../header.php");
             </div>
             <div>
                 <h3>E-Mail</h3>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div>
                 <h3>Passwort</h3>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
             <div>
                 <h3>Passwort erneut eingeben</h3>
-                <input type="password" name="password2" id="password2">
+                <input type="password" name="password2" id="password2" required>
             </div>
             <div>
                 <button type="submit">Erstellen</button>

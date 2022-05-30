@@ -23,11 +23,11 @@ include("../header.php");
         <form action="login.php" method="post">
             <div>
                 <label for="email">E-MAIL</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
             <div>
                 <label for="password">PASSWORT</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
             <div>
                 <button type="submit">ANMELDEN</button>
@@ -38,6 +38,15 @@ include("../header.php");
         </div>
 
     </div>
+
+    <?php
+        if(isset($_GET['failed'])){
+            echo "<div class=\"alerterror\">
+            <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span>
+            <strong>Fehler!</strong> Bei der Anmeldung ist ein Fehler aufgetreten.
+        </div>";
+        }
+    ?>
 
     <?php
     include("../footer-other.php");
