@@ -99,10 +99,15 @@ include("./headerIndex.php");
             while ($row = $result->fetch_assoc()) {
                 //echo $row["artikelnr"] . " " . $row["titel"] . " " . $row["img"] . " " . $row["preis"] . " " . $row["katigorie"] . "<br>";
 
+            
+                echo "<div id=\"" . $row["artikelnr"] . "\"";
 
-                echo "<div id=\"" . $row["artikelnr"] . "\" style=\"background: url('";
-                echo "./img/artikel/" . $row["bezeichnung"] . "/" .  $row['img'];
-                echo "')\">";
+                $path = "./img/artikel/" . $row["bezeichnung"] . "/" .  $row['img'];
+
+                if($row['img'] != null && file_exists($path)){
+
+                    echo "style=\"background: url('" . $path . "')\">";
+                }
 
                 echo "<div class=\"product-overlay\"></div>";
 
