@@ -22,9 +22,8 @@ function addCart(item){
         localStorage.setItem(artikelnr, (vorherAnz + anz));
     }
 
-    alert("Zum Einkaufswagen hinzugefügt");
-
-    // TODO: Alert dass artikel zum Einkaufswagen hinzugefügt worden ist
+    let alert = document.getElementsByClassName('alert');
+    alert[0].style.display = 'block';
 }
 
 

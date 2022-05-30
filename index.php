@@ -23,7 +23,7 @@ include("./headerIndex.php");
         </header>
         <nav>
             <div>
-                <a  href="./unterseiten/warenkorb.php">WARENKORB</a>
+                <a href="./unterseiten/warenkorb.php">WARENKORB</a>
             </div>
             <div>
                 <a href="./unterseiten/profil.php">KONTO</a>
@@ -75,6 +75,11 @@ include("./headerIndex.php");
                 }
             </script>
         </div>
+    </div>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Funktioniert!</strong> Artikel konnte in den Warenkob gegeben werden.
     </div>
 
     <main>
