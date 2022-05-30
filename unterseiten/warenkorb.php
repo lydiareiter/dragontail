@@ -30,14 +30,21 @@ include("../header.php");
         ?>
 
         <script>
+            function buy() {
+                localStorage.clear();
+                location.reload();
+            }
+
             let warenkorb = document.getElementById('warenkorb');
-            if(localStorage.length == 0){
+            if (localStorage.length == 0) {
                 warenkorb.innerHTML = '<h3>Sie haben nichts in Ihren Warenkob</h3>';
-            }else{
+            } else {
                 warenkorb.innerHTML = "";
                 for (let index = 0; index < localStorage.length; index++) {
                     warenkorb.innerHTML += ("<p>" + localStorage[index] + "</p>");
                 }
+
+                warenkorb.innerHTML += "<div><button onclick=\"buy()\">Kaufen</button></div>";
             }
         </script>
 

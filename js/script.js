@@ -41,7 +41,6 @@ function already(anz, artikelnr){
     return false;
 }
 
-
 let locations = window.location.href.split('/');
 
 if(locations[locations.length - 1] == "warenkorb.php"){
