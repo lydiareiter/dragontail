@@ -23,6 +23,7 @@ function addCart(item){
         localStorage.setItem(localStorage.length, artikelnr + "/" + anz);
     }
 
+    item.parentElement.children[0].children[1].innerHTML = 1;
     
     let alert = document.getElementsByClassName('alert');
     alert[0].style.display = 'block';
