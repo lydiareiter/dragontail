@@ -22,17 +22,35 @@ include("../header.php");
     </div>
     <div id="warenkorb">
         <?php
+        /*
         if ($_COOKIE["Dragontail"] == null) {
             header("Location: ./profil.php");
             exit;
         }
-
+        */
         ?>
 
         <script>
             function buy() {
-                localStorage.clear();
-                location.reload();
+                if (document.cookie != "") {
+                    localStorage.clear();
+                    location.reload();
+                }else{
+                    let ari = window.location.href.split("/");
+                    let locat = "";
+                    ari[ari.length-1] = "anmelden.php?failed=true";
+
+                    for (let index = 0; index < ari.length; index++) {
+                        locat += ari[index];
+                        if(index != ari.length - 1){
+                            locat += "/";
+                        }
+                    }
+
+                    console.log(locat);
+
+                    window.location.href = locat;
+                }
             }
 
             let warenkorb = document.getElementById('warenkorb');

@@ -43,7 +43,7 @@ include("../header.php");
         if(isset($_GET['failed'])){
             echo "<div class=\"alerterror\">
             <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span>
-            <strong>Fehler!</strong> Bei der Anmeldung ist ein Fehler aufgetreten.
+            <strong>Fehler oder Problem!</strong> Problem bei den vorgenommenen Vorgang.
         </div>";
         }
     ?>
