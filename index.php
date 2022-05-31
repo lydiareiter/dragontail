@@ -41,7 +41,7 @@ include("./headerIndex.php");
                             <?php
 
                             // Get Data
-                            $sql = "SELECT * FROM katigorie";
+                            $sql = "SELECT * FROM katigorie;";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
@@ -87,9 +87,9 @@ include("./headerIndex.php");
         <?php
 
         if (isset($_GET["kat"]) && $_GET["kat"] != 'none') {
-            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where k.bezeichnung like '" . $_GET["kat"] . "';";
+            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) where k.bezeichnung like '" . $_GET["kat"] . "' ORDER BY RAND();";
         } else {
-            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid);";
+            $sql = "SELECT * FROM artikel join katigorie k using (katigorieid) ORDER BY RAND();";
         }
 
         // Get Data
