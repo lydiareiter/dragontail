@@ -35,7 +35,7 @@ include("./headerIndex.php");
             <div class="filter-content">
                 <form action="index.php" method="get">
                     <div>
-                        <label for="katigorie">Katigorie: </label>
+                        <label for="katigorie">Kategorie: </label>
                         <select name="kat" id="kat">
                             <option value="none">Bitte auswählen</option>
                             <?php
