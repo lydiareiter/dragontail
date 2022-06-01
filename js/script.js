@@ -15,6 +15,12 @@ function addCart(item){
     let anz = parseInt(item.parentElement.children[0].children[1].innerHTML);
     let artikelnr = parseInt(item.parentElement.parentElement.parentElement.id);
 
+    /*
+    fetch('./api/insert-warenkorb.php?email=gast&artikelnr=1&anz=10')
+        .then(response => response.json())
+        .then(data => console.log(data)); 
+    */
+
     if(localStorage.length != 0){
         if(already(anz, artikelnr) == false){
             localStorage.setItem(localStorage.length, artikelnr + "/" + anz);

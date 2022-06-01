@@ -15,8 +15,13 @@ if (isset($_GET['benutzerid'])) {
     $conn->query($sql);
 }
 
-if (isset($_GET['benutzer']) && isset($_GET['artikelnr'])) {
-    $sql = "INSERT INTO `warenkorb` (`warenkorbid`, `email`) VALUES (NULL, '" . $_GET['benutzer'] . "');";
+if (isset($_GET['email']) && isset($_GET['artikelnr']) && isset($_GET['anz'])) {
+    $sql = "insert into warenkorbartikel (warenkorbid, artikelnr, anz) value 
+    (
+        (select warenkorbid from warenkorb where email like '" . $_GET['email'] . "'), 
+        " . $_GET['artikelnr'] . ",
+        " . $_GET['anz'] . "
+    );";
     $conn->query($sql);
 }
 
